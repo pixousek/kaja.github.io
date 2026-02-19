@@ -51,7 +51,7 @@ async def gt(ctx):
     gif_bytes_io.seek(0)
 
     randomnum = randrange(1000000, 9999999)
-    filename = f"{randomnum}_{attachment.filename.split('.')[0]}.gif"
+    filename = f"{randomnum}.gif"
 
     with open(filename, "wb") as f:
         f.write(gif_bytes_io.read())
