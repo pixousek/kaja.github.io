@@ -60,8 +60,14 @@ async def gt(ctx):
     await run_git_command(["git", "commit", "-m", f"Add {filename}"])
     await run_git_command(["git", "push", "origin", "master"])
 
+    await ctx.send(f"Dělám tvůj úžasnej gif, ale počkej mi minutku.\n-# čekám než si github rozhodne tam dát ten gif")
+
+    await asyncio.sleep(60)
+
+    await ctx.message.delete()
+
     await ctx.send(
-        f"https://github.com/pixousek/kaja.github.io/blob/master/{filename}"
+        f"https://pixousek.github.io/kaja.github.io/{filename}"
     )
 
 
